@@ -1,0 +1,58 @@
+body{
+	margin:0;
+	background: url(../img/packed-4.png);
+}
+#canvas{
+	display: block;
+	position:absolute;
+	left:50%;
+	top:50%;
+	margin-left:-300px;
+	margin-top:-300px;
+	box-shadow: rgba(0,0,2,0.8);
+	background: rgba(200,200,200,0.5);
+}
+#tu{
+	z-index: -3;
+}
+#tu:before,#tu:after{
+	position: absolute;
+	content: "";
+	background-image: url(../img/river.jpg);
+	background-size: 19860px 626px;
+	background-repeat: no-repeat;
+	width: 19860px;
+	height: 626px;
+	animation-duration:600s;
+	animation-timing-function:linear;
+	animation-iteration-count:infinite;
+
+}
+#tu:before{
+	animation-name:a;	
+}
+#tu:after{
+	animation-name:b;	
+}
+@keyframes a{
+	0%,100%{
+		transform:translate3d(0,0,0);
+	}
+	50%{
+		transform:translate3d(-19860px,0,0);
+	}
+	50.001%{
+		transform:translate3d(19860px,0,0);
+	}
+}
+@keyframes b{
+	0%{
+		transform:translate3d(19860px,0,0);
+	}
+	50%{
+		transform:translate3d(0,0,0);
+	}
+	100%{
+		transform:translate3d(-19860px,0,0);
+	}
+}
